@@ -1,4 +1,4 @@
-﻿namespace CoHook
+﻿namespace CoHook.Enum
 {
     public enum VKCode : byte
     {

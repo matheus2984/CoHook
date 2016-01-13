@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D61D4814-DD76-4672-A73C-64BCF783D1DE}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{E46160BE-BF48-4175-AA42-B8DC206FA0BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CoHook</RootNamespace>
-    <AssemblyName>CoHook</AssemblyName>
+    <RootNamespace>CoHook.Extentions</RootNamespace>
+    <AssemblyName>CoHook.Extentions</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,8 +32,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,29 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enum\MouseEventFlags.cs" />
-    <Compile Include="Hook\KeyboardHook.cs" />
-    <Compile Include="Hook\MouseHook.cs" />
-    <Compile Include="NativeMethods.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Clock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Enum\VKCode.cs" />
-    <Compile Include="Enum\VKState.cs" />
-    <Compile Include="Structure\MSLLHOOKSTRUCT.cs" />
-    <Compile Include="Structure\POINT.cs" />
-    <Compile Include="Hook\WindowHook.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Events\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CoHook.Extentions\CoHook.Extentions.csproj">
-      <Project>{e46160be-bf48-4175-aa42-b8dc206fa0be}</Project>
-      <Name>CoHook.Extentions</Name>
-    </ProjectReference>
+    <Compile Include="Threading\ThreadAction.cs" />
+    <Compile Include="Threading\ThreadSafe.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

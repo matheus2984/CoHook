@@ -1,4 +1,8 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
+using CoHook.Enum;
+using CoHook.Extentions.Threading;
+using CoHook.Hook;
 
 namespace CoHook
 {
@@ -6,19 +10,25 @@ namespace CoHook
     {
         public static void Main()
         {
-            while (true)
-            {
-                string title = NativeMethods.GetActiveWindowTitle();
-                if (string.IsNullOrEmpty(title)) continue;
+            ThreadAction.Factory(AutoPotThread, 1, true);
+            Console.ReadKey();
+        }
 
-                if (title.Contains("Conquer"))
-                {
-                    NativeMethods.SendKey(VKCode.F1, VKState.Pressed);
-                    NativeMethods.SendKey(VKCode.F1, VKState.Released);
-                    Thread.Sleep(150);
-                }
-                Thread.Sleep(1);
-            }
+        private static bool ConquerFocusCheck()
+        {
+            string title = WindowHook.GetActiveWindowTitle();
+            return !string.IsNullOrEmpty(title) && title.Contains("Conquer");
+        }
+
+        public static void AutoPotThread()
+        {
+            if (!ConquerFocusCheck()) return;
+            KeyboardHook.SendKey(VKCode.F1, VKState.Pressed);
+            KeyboardHook.SendKey(VKCode.F1, VKState.Released);
+            Thread.Sleep(100);
+            KeyboardHook.SendKey(VKCode.F2, VKState.Pressed);
+            KeyboardHook.SendKey(VKCode.F2, VKState.Released);
+            Thread.Sleep(100);
         }
     }
 }

@@ -4,3 +4,5 @@ C:\Users\Ademario\Desktop\CoHook\CoHook\bin\Debug\CoHook.pdb
 C:\Users\Ademario\Desktop\CoHook\CoHook\obj\Debug\CoHook.csprojResolveAssemblyReference.cache
 C:\Users\Ademario\Desktop\CoHook\CoHook\obj\Debug\CoHook.exe
 C:\Users\Ademario\Desktop\CoHook\CoHook\obj\Debug\CoHook.pdb
+C:\Users\Ademario\Desktop\CoHook\CoHook\bin\Debug\CoHook.Extentions.dll
+C:\Users\Ademario\Desktop\CoHook\CoHook\bin\Debug\CoHook.Extentions.pdb

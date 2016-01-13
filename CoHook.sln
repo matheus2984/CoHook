@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoHook", "CoHook\CoHook.csproj", "{D61D4814-DD76-4672-A73C-64BCF783D1DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoHook.Extentions", "CoHook.Extentions\CoHook.Extentions.csproj", "{E46160BE-BF48-4175-AA42-B8DC206FA0BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D61D4814-DD76-4672-A73C-64BCF783D1DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D61D4814-DD76-4672-A73C-64BCF783D1DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D61D4814-DD76-4672-A73C-64BCF783D1DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E46160BE-BF48-4175-AA42-B8DC206FA0BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E46160BE-BF48-4175-AA42-B8DC206FA0BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E46160BE-BF48-4175-AA42-B8DC206FA0BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E46160BE-BF48-4175-AA42-B8DC206FA0BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
