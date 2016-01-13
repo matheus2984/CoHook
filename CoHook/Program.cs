@@ -11,6 +11,7 @@ namespace CoHook
         public static void Main()
         {
             ThreadAction.Factory(AutoPotThread, 1, true);
+            ThreadAction.Factory(AutoClick, 10, true);
             Console.ReadKey();
         }
 
@@ -25,10 +26,14 @@ namespace CoHook
             if (!ConquerFocusCheck()) return;
             KeyboardHook.SendKey(VKCode.F1, VKState.Pressed);
             KeyboardHook.SendKey(VKCode.F1, VKState.Released);
-            Thread.Sleep(100);
             KeyboardHook.SendKey(VKCode.F2, VKState.Pressed);
             KeyboardHook.SendKey(VKCode.F2, VKState.Released);
-            Thread.Sleep(100);
+        }
+
+        public static void AutoClick()
+        {
+            if (!ConquerFocusCheck()) return;
+            MouseHook.SendRightClick();
         }
     }
 }
