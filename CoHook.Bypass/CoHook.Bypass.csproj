@@ -4,26 +4,24 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D61D4814-DD76-4672-A73C-64BCF783D1DE}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{C85E63C9-0D2D-4749-9B68-762D1CE712A6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CoHook</RootNamespace>
-    <AssemblyName>CoHook</AssemblyName>
+    <RootNamespace>CoHook.Bypass</RootNamespace>
+    <AssemblyName>CoHook.Bypass</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,15 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>conquer.ico</ApplicationIcon>
+    <StartupObject />
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject />
+    <ApplicationIcon>conquer.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,55 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\DbConfig.cs" />
-    <Compile Include="Effects.cs" />
-    <Compile Include="Enum\MouseEventFlags.cs" />
-    <Compile Include="Hook\KeyboardHook.cs" />
-    <Compile Include="Hook\MouseHook.cs" />
-    <Compile Include="NativeMethods.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="ByPass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Enum\VKCode.cs" />
-    <Compile Include="Enum\VKState.cs" />
-    <Compile Include="Structure\MSLLHOOKSTRUCT.cs" />
-    <Compile Include="Structure\POINT.cs" />
-    <Compile Include="Hook\WindowHook.cs" />
-    <Compile Include="Window\FrmConfig.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Window\FrmConfig.Designer.cs">
-      <DependentUpon>FrmConfig.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Window\FrmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Window\FrmMain.Designer.cs">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Events\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CoHook.Bypass\CoHook.Bypass.csproj">
-      <Project>{c85e63c9-0d2d-4749-9b68-762d1ce712a6}</Project>
-      <Name>CoHook.Bypass</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CoHook.Extentions\CoHook.Extentions.csproj">
-      <Project>{e46160be-bf48-4175-aa42-b8dc206fa0be}</Project>
-      <Name>CoHook.Extentions</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Window\FrmConfig.resx">
-      <DependentUpon>FrmConfig.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Window\FrmMain.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="conquer.ico" />

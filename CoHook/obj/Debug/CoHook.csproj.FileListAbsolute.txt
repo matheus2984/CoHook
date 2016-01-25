@@ -6,3 +6,8 @@ C:\Users\Ademario\Desktop\CoHook\CoHook\obj\Debug\CoHook.exe
 C:\Users\Ademario\Desktop\CoHook\CoHook\obj\Debug\CoHook.pdb
 C:\Users\Ademario\Desktop\CoHook\CoHook\bin\Debug\CoHook.Extentions.dll
 C:\Users\Ademario\Desktop\CoHook\CoHook\bin\Debug\CoHook.Extentions.pdb
+C:\Users\Ademario\Desktop\CoHook\CoHook\obj\Debug\CoHook.Window.FrmConfig.resources
+C:\Users\Ademario\Desktop\CoHook\CoHook\obj\Debug\CoHook.Window.FrmMain.resources
+C:\Users\Ademario\Desktop\CoHook\CoHook\obj\Debug\CoHook.csproj.GenerateResource.Cache
+C:\Users\Ademario\Desktop\CoHook\CoHook\bin\Debug\CoHook.Bypass.pdb
+C:\Users\Ademario\Desktop\CoHook\CoHook\bin\Debug\CoHook.Bypass.exe

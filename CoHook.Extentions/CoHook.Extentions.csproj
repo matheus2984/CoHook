@@ -40,6 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clock.cs" />
+    <Compile Include="IO\BinaryInput.cs" />
+    <Compile Include="IO\BinaryOutput.cs" />
+    <Compile Include="IO\EncodingAttribute.cs" />
+    <Compile Include="IO\ISerializable.cs" />
+    <Compile Include="IO\Serializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Threading\ThreadAction.cs" />
     <Compile Include="Threading\ThreadSafe.cs" />
