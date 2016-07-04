@@ -52,6 +52,8 @@
     <Compile Include="Database\DbConfig.cs" />
     <Compile Include="Effects.cs" />
     <Compile Include="Enum\MouseEventFlags.cs" />
+    <Compile Include="Functions\AutoPot.cs" />
+    <Compile Include="Functions\Client.cs" />
     <Compile Include="Hook\KeyboardHook.cs" />
     <Compile Include="Hook\MouseHook.cs" />
     <Compile Include="NativeMethods.cs" />
@@ -76,7 +78,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Events\" />
